@@ -1,24 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
 import './App.css';
+import CssWizardy from './CssWizardry';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <BrowserRouter>
+        <header className='App-header'>
+          <div className='App-logo'>Leo Danielsson</div>
+          <nav>
+            <ul className='App-nav'>
+              <li>
+                <NavLink activeClassName='App-nav-active' to='/css-wizardry'>
+                  CSS Wizardry
+                </NavLink>
+              </li>
+              <li>
+                <NavLink activeClassName='App-nav-active' to='/search-app'>
+                  Search App
+                </NavLink>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <main>
+          <Switch>
+            <Route path='/css-wizardry'>
+              <CssWizardy />
+            </Route>
+            <Route path='/search-app'>
+              <h1>Coming soon</h1>
+            </Route>
+          </Switch>
+        </main>
+      </BrowserRouter>
     </div>
   );
 }
