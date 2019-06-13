@@ -1,4 +1,5 @@
 import React from 'react';
+import './SearchHistory.css';
 
 export default ({ searchHistory, deleteHistoryEntry, clearSearchHistory }) => {
   if (!searchHistory.length) {
@@ -6,17 +7,17 @@ export default ({ searchHistory, deleteHistoryEntry, clearSearchHistory }) => {
   }
 
   return (
-    <aside className='SearchApp-history'>
-      <div className='SearchApp-historyHead'>
+    <>
+      <div className='SearchHistory-head'>
         <h2>Search history</h2>
-        <button className='SearchApp-clearHistory' onClick={clearSearchHistory}>
+        <button className='SearchHistory-clear' onClick={clearSearchHistory}>
           Clear search history
         </button>
       </div>
-      <ul className='SearchApp-historyList'>
+      <ul className='SearchHistory-list'>
         {searchHistory.map(entry => (
-          <li key={entry.id} className='SearchApp-historyEntry'>
-            <div className='SearchApp-historyEntryName'>{entry.name}</div>
+          <li key={entry.id} className='SearchHistory-entry'>
+            <div className='SearchHistory-entryName'>{entry.name}</div>
             <div>{entry.timestamp.toLocaleString()}</div>
             <button
               aria-label='Delete'
@@ -27,6 +28,6 @@ export default ({ searchHistory, deleteHistoryEntry, clearSearchHistory }) => {
           </li>
         ))}
       </ul>
-    </aside>
+    </>
   );
 };

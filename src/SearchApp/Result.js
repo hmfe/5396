@@ -10,7 +10,7 @@ export default ({ result }) => {
         <h3>{result.name}</h3>
       </a>
       <img
-        className='SearchApp-image'
+        className='Result-image'
         src={result.image_uris.normal}
         alt={`${result.name} ${result.mana_cost} ${result.type_line} ${
           result.oracle_text

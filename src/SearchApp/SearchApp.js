@@ -94,11 +94,13 @@ export default () => {
         />
         <Result result={result} />
       </main>
-      <SearchHistory
-        searchHistory={searchHistory}
-        deleteHistoryEntry={deleteHistoryEntry}
-        clearSearchHistory={clearSearchHistory}
-      />
+      <aside>
+        <SearchHistory
+          searchHistory={searchHistory}
+          deleteHistoryEntry={deleteHistoryEntry}
+          clearSearchHistory={clearSearchHistory}
+        />
+      </aside>
     </div>
   );
 };

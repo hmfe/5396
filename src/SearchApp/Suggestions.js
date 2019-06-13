@@ -1,4 +1,5 @@
 import React from 'react';
+import './Suggestions.css';
 
 export default ({ suggestions, selectResult, formatSuggestion }) => {
   if (!suggestions.length) {
@@ -6,11 +7,11 @@ export default ({ suggestions, selectResult, formatSuggestion }) => {
   }
 
   return (
-    <ul className='SearchApp-suggestions'>
+    <ul className='Suggestions'>
       {suggestions.map(suggestion => (
         <li key={suggestion.id}>
           <button
-            className='SearchApp-suggestion'
+            className='Suggestions-suggestion'
             onClick={() => selectResult(suggestion)}
             aria-label={suggestion.name}
           >
