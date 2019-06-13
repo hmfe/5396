@@ -1,4 +1,5 @@
 import React from 'react';
+import './Result.css';
 
 export default ({ result }) => {
   if (!result) {
