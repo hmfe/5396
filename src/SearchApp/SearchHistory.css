@@ -1,0 +1,21 @@
+.SearchHistory-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.SearchHistory-entry {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid slategray;
+  padding: 16px 0;
+}
+
+.SearchHistory-entryName {
+  flex-grow: 1;
+}
+
+.SearchHistory-clear {
+  display: inline;
+  text-decoration: underline;
+}
