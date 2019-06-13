@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
 import './App.css';
-import CssWizardy from './CssWizardry';
+import CssWizardy from './CssWizardry/CssWizardry';
+import SearchApp from './SearchApp/SearchApp';
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
               <CssWizardy />
             </Route>
             <Route path='/search-app'>
-              <h1>Coming soon</h1>
+              <SearchApp />
             </Route>
           </Switch>
         </main>

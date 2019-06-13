@@ -1,5 +1,4 @@
 .App {
-  text-align: center;
 }
 
 .App-header {
@@ -27,7 +26,7 @@
 .App-nav a {
   display: block;
   color: white;
-  padding: 8px;
+  padding: 16px;
   text-decoration: none;
 }
 

@@ -1,10 +1,11 @@
 .CssWizardry {
+  text-align: center;
 }
 
 .CssWizardry-button {
   display: flex;
   align-items: center;
-  background: linear-gradient(to right, rgb(252, 173, 27), orange);
+  background: linear-gradient(to right, rgb(255, 183, 50), orange);
   font-size: 32px;
   font-weight: bold;
   font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -17,8 +18,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 92px;
-  height: 92px;
+  width: 96px;
+  height: 96px;
   content: '✕';
   font-size: 40px;
   background-color: white;

@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css';
+import './CssWizardry.css';
 
 export default () => (
   <div className='CssWizardry'>
