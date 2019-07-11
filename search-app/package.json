@@ -1,0 +1,14 @@
+{
+  "name": "search-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "serve"
+  },
+  "author": "Leo Danielsson",
+  "license": "Unlicensed",
+  "devDependencies": {
+    "serve": "^11.1.0"
+  }
+}

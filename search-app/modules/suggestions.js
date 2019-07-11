@@ -43,6 +43,7 @@ const render = (suggestions, query, selectResult) => {
       };
     })
   });
+
   document
     .querySelectorAll('[data-js=suggestionButton]')
     .forEach(suggestionButton => {
