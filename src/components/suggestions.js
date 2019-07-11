@@ -3,6 +3,8 @@ import './suggestions.css';
 
 const suggestionsEl = document.getElementById('suggestions');
 
+const fixWhitespace = str => str.replace(/\s/g, '&nbsp');
+
 const formatSuggestion = (name, query) => {
   const match = name.match(new RegExp(query, 'i'));
   if (!match) {
@@ -11,9 +13,9 @@ const formatSuggestion = (name, query) => {
   const capture = match[0];
   const parts = name.split(capture);
   return {
-    prefix: parts[0].replace(/\s/g, '&nbsp'),
-    match: capture.replace(/\s/g, '&nbsp'),
-    suffix: parts[1].replace(/\s/g, '&nbsp')
+    prefix: fixWhitespace(parts[0]),
+    match: fixWhitespace(capture),
+    suffix: fixWhitespace(parts[1])
   };
 };
 
