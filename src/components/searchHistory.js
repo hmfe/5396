@@ -1,12 +1,7 @@
-const searchHistoryListEl = document.getElementById('searchHistoryList');
+import './searchHistory.css';
+import searchHistoryEntryTemplate from './searchHistoryEntry.handlebars';
 
-const searchHistoryEntryTemplate = Handlebars.compile(`
-  <li data-timestamp={{timestamp}} class="SearchHistory-entry">
-    <div class="SearchHistory-entryName">{{name}}</div>
-    <div>{{formattedTime}}</div>
-    <button data-js="searchHistoryEntryDeleteButton" aria-label="Delete">✕</button>
-  </li>
-`);
+const searchHistoryListEl = document.getElementById('searchHistoryList');
 
 const clearSearchHistory = () => {
   searchHistoryListEl.innerHTML = '';

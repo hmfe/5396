@@ -1,10 +1,11 @@
-import search from './modules/search.js';
-import renderSuggestions from './modules/suggestions.js';
-import renderResult from './modules/result.js';
+import search from './utils/search';
+import renderSuggestions from './components/suggestions';
+import renderResult from './components/result';
 import {
   init as initSearchHistory,
   appendSearchHistory
-} from './modules/searchHistory.js';
+} from './components/searchHistory';
+import './index.css';
 
 const searchFormEl = document.querySelector('[data-js="searchForm"]');
 const searchInputEl = searchFormEl.querySelector('input');

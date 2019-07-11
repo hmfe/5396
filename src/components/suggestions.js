@@ -1,22 +1,7 @@
-const suggestionsEl = document.getElementById('suggestions');
+import suggestionTemplate from './suggestions.handlebars';
+import './suggestions.css';
 
-const suggestionTemplate = Handlebars.compile(`
-{{#each suggestions}}
-  <li>
-      <button
-        type="button"
-        class="Suggestions-suggestion"
-        data-js="suggestionButton"
-        data-id={{id}}
-        aria-label="{{name}}"
-      >
-        <span>{{{prefix}}}</span>
-        <strong>{{{match}}}</strong>
-        <span>{{{suffix}}}</span>
-      </button>
-  </li>
-{{/each}}
-`);
+const suggestionsEl = document.getElementById('suggestions');
 
 const formatSuggestion = (name, query) => {
   const match = name.match(new RegExp(query, 'i'));
