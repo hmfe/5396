@@ -22,3 +22,9 @@ button {
   border: none;
   font-size: inherit;
 }
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

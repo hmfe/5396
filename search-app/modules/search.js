@@ -1,6 +1,12 @@
 const cache = {};
 
-const search = async query => {
+export default async query => {
+  if (!query) {
+    return [];
+  }
+  if (cache[query]) {
+    return cache[query];
+  }
   try {
     const response = await fetch(
       `https://api.scryfall.com/cards/search?q=${query}`
@@ -9,21 +15,12 @@ const search = async query => {
     if (json.status === 404) {
       return [];
     }
-    return json.data;
+    const results = json.data;
+    cache[query] = results;
+    return results;
   } catch {
     console.log('error');
+    cache[query] = [];
     return [];
   }
-};
-
-export default async query => {
-  if (!query) {
-    return [];
-  }
-  if (cache[query]) {
-    return cache[query];
-  }
-  const results = await search(query);
-  cache[query] = results;
-  return results;
 };

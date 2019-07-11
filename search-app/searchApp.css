@@ -13,10 +13,6 @@
   }
 }
 
-.SearchApp-heading {
-  grid-column: 1 / span 2;
-}
-
 .SearchApp-search {
   display: flex;
   flex-direction: column;

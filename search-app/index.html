@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Search App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="searchApp.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="modules/searchHistory.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="modules/suggestions.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="modules/result.css"
+    />
+    <script src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars.min-v4.1.2.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="SearchApp-heading">Search App</h1>
+    </header>
+    <div class="SearchApp">
+      <main class="SearchApp-search">
+        <form data-js="searchForm" role="search" class="SearchApp-form">
+          <label for="query">
+            <h2>Search for Magic The Gathering cards</h2>
+          </label>
+          <input id="query" type="search" class="SearchApp-input" />
+          <ul id="suggestions" class="Suggestions"></ul>
+        </form>
+        <div id="result"></div>
+      </main>
+      <aside>
+        <div class="SearchHistory-head">
+          <h2>Search history</h2>
+          <button
+            data-js="clearSearchHistoryButton"
+            class="SearchHistory-clear"
+          >
+            Clear search history
+          </button>
+        </div>
+        <ul id="searchHistoryList" class="SearchHistory-list"></ul>
+      </aside>
+    </div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
