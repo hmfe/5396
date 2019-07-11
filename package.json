@@ -2,7 +2,7 @@
   "name": "search-app",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "search-app/main.js",
   "scripts": {
     "start": "serve"
   },
@@ -10,5 +10,8 @@
   "license": "Unlicensed",
   "devDependencies": {
     "serve": "^11.1.0"
+  },
+  "dependencies": {
+    "handlebars": "^4.1.2"
   }
 }

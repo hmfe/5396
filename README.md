@@ -2,14 +2,14 @@
 
 ## CSS Wizardry
 
-Simply open the HTML file in a browser
+Simply open the HTML file `css-wizardry/index.html` in a browser
 
 ## Search App
 
 Hosted here:
 
 Written in Vanilla JS and Handlebars.
-NB: Uses js modules wihtout Webpack or Babel. Will only work locally if run on a server. Will also not work in IE/Edge.
+NB: Uses js modules wihtout Webpack or Babel. Will only work locally if run on a local web server. Will also not work in IE or Edge.
 
 ### Install dependencies
 
