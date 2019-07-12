@@ -1,4 +1,5 @@
 import search from './utils/search';
+import debounce from './utils/debounce';
 import renderSuggestions from './components/suggestions';
 import renderResult from './components/result';
 import {
@@ -9,7 +10,6 @@ import './index.css';
 
 const searchFormEl = document.querySelector('[data-js="searchForm"]');
 const searchInputEl = searchFormEl.querySelector('input');
-let requestCount = 0;
 
 const selectResult = result => {
   renderSuggestions([]);
@@ -18,16 +18,13 @@ const selectResult = result => {
   appendSearchHistory(result);
 };
 
-const handleQueryChange = async event => {
+const fetchSuggestions = async event => {
   const query = event.target.value;
-  const requestId = ++requestCount;
   const suggestions = await search(query);
-
-  // Only render suggestions if this was the latest request fired.
-  if (requestCount === requestId) {
-    renderSuggestions(suggestions, query, selectResult);
-  }
+  renderSuggestions(suggestions, query, selectResult);
 };
+
+const handleQueryChange = debounce(fetchSuggestions, 200);
 
 const handleSubmit = async event => {
   event.preventDefault();
