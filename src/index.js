@@ -10,6 +10,7 @@ import './index.css';
 
 const searchFormEl = document.querySelector('[data-js="searchForm"]');
 const searchInputEl = searchFormEl.querySelector('input');
+let requestCount = 0;
 
 const selectResult = result => {
   renderSuggestions([]);
@@ -20,8 +21,13 @@ const selectResult = result => {
 
 const fetchSuggestions = async event => {
   const query = event.target.value;
+  const requestId = ++requestCount;
   const suggestions = await search(query);
-  renderSuggestions(suggestions, query, selectResult);
+
+  // Only render suggestions if this was the latest request
+  if (requestId === requestCount) {
+    renderSuggestions(suggestions, query, selectResult);
+  }
 };
 
 const handleQueryChange = debounce(fetchSuggestions, 200);
