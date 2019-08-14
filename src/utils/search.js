@@ -9,7 +9,9 @@ export default async query => {
   }
   try {
     const response = await fetch(
-      `https://api.scryfall.com/cards/search?q=${query}`
+      `https://api.scryfall.com/cards/search?q=${window.encodeURIComponent(
+        query
+      )}`
     );
     const json = await response.json();
     if (json.status === 404) {
