@@ -1,0 +1,28 @@
+.CssWizardry {
+  text-align: center;
+}
+
+.CssWizardry-button {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, rgb(255, 183, 50), orange);
+  font-size: 32px;
+  font-weight: bold;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  padding: 8px 16px;
+  border: 2px solid slategray;
+  margin: 0 auto;
+}
+
+.CssWizardry-button::after {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+  content: '✕';
+  font-size: 40px;
+  background-color: white;
+  border-radius: 50%;
+  margin-left: 16px;
+}

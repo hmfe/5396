@@ -1,0 +1,15 @@
+.Suggestions {
+  text-align: left;
+  border: 2px solid lightgray;
+}
+
+.Suggestions-suggestion {
+  display: flex;
+  padding: 24px;
+  width: 100%;
+  text-align: left;
+}
+
+.Suggestions-match {
+  font-weight: bold;
+}

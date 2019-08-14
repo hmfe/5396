@@ -1,0 +1,9 @@
+{{#each suggestions}}
+<li>
+  <button type="button" class="Suggestions-suggestion" data-js="suggestionButton" data-id={{id}} aria-label="{{name}}">
+    <span>{{{prefix}}}</span>
+    <strong>{{{match}}}</strong>
+    <span>{{{suffix}}}</span>
+  </button>
+</li>
+{{/each}}
